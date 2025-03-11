@@ -19,7 +19,7 @@ const createUser = async (req, res) => {
         } else if (password !== confirmPassword) {
             return res.status(200).json({
                 status: 'ERR',
-                message: 'The password is equal confirmPassword'
+                message: 'The password is equal confirm password'
             })
         }
         const response = await UserService.createUser(req.body)
