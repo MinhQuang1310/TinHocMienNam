@@ -25,7 +25,7 @@ const refreshTokenJwtService = (token) => {
                 if (err) {
                     resolve({
                         status: 'ERR',
-                        message: 'The authemtication'
+                        message: 'The authentication'
                     })
                 }
                 const access_token = await genneralAccessToken({
