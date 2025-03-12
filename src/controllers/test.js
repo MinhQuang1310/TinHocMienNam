@@ -2,7 +2,7 @@
 
 // Hàm xử lý yêu cầu GET để trả về giá trị "hello"
 const getHello = (req, res) => {
-    res.send('hello');
+    res.send('Hello');
   };
   
   // Xuất hàm để sử dụng ở nơi khác
