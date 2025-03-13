@@ -8,11 +8,13 @@ const userSchema = new mongoose.Schema(
         phone: { type: Number },
         address: { type: String },
         avatar: { type: String },
-        city: {type: String}
+        city: {type: String},
+        enrolled_courses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Curriculum' }]
     },
     {
         timestamps: true
     }
 );
+userSchema.index({ email: 1 });
 const User = mongoose.model("User", userSchema);
 module.exports = User;
